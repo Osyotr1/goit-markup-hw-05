@@ -69,8 +69,6 @@ img {
 /*----------------------------- header------------------------------------ */
 
 .header {
-    padding-top: 24px;
-    padding-bottom: 25px;
     border-bottom: 1px solid #ECECEC;
 }
 
@@ -102,8 +100,8 @@ img {
     display: block;
     font-weight: 500;
     font-size: 14px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 32px;
+    padding-bottom: 32px;
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--header-link-color);
@@ -126,7 +124,7 @@ img {
     content: "";
     width: 100%;
     height: 4px;
-    bottom: -26px;
+    bottom: -1px;
     background-color: #2196F3;
     border-radius: 2px;
 }
