@@ -105,6 +105,7 @@ img {
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--header-link-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link:hover,
@@ -133,6 +134,7 @@ img {
     color: var(--header-contacts-color);
     display: flex;
     align-items: center;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-con-icon {
@@ -214,6 +216,7 @@ img {
     color: #ffffff;
     background-color: var(--button-bg-color);
     border: 4px var(--button-bg-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-btn:hover,
@@ -284,14 +287,6 @@ img {
     overflow: hidden;
 }
 
-.pic-main {
-    display: flex;
-    justify-content: center;
-}
-
-.pic-item:not(:last-child) {
-    margin-right: 30px;
-}
 
 
 /* -----------------------------------work page 1 ---------------------------------- */
@@ -307,6 +302,42 @@ img {
 
 }
 
+.pic-main {
+    display: flex;
+    justify-content: center;
+}
+
+.pic-item {
+    position: relative;
+    width: 370px;
+    height: 294px;
+}
+
+.pic-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.work-text {
+    display: flex;
+    position: absolute;
+    height: 70px;
+    width: 100%;
+    
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: rgba(47, 48, 58, 0.8);
+}
+
 
 /*------------------------------------ team page 1----------------------------------  */
 
@@ -315,7 +346,6 @@ img {
 }
 
 .members {
-    
     text-align: center;
     margin-bottom: 50px;
     font-weight: bold;
@@ -386,6 +416,7 @@ img {
     height: 100%;
     border-radius: 50%;
     color: #AFB1B8;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-social-link:hover,
@@ -436,6 +467,7 @@ img {
     box-sizing: border-box;
     border-radius: 4px;
     color: #AFB1B8;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-icon {
@@ -492,6 +524,7 @@ img {
     background-color: var(--filter-btn-bg);
     border: transparent;
     padding: 6px 22px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover,
@@ -512,9 +545,39 @@ img {
     margin-top: 50px;
 }
 
+.overlay-box {
+    position: relative;
+    width: 370px;
+    height: 294px;
+    overflow: hidden;
+}
+
+
+.overlay-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 63px 24px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    background-color: rgba(33, 150, 243, 0.9);
+
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .pic-list {
     margin-right: 30px;
     margin-bottom: 30px;
+    width: 370px;
 }
 
 .pic-list:nth-last-child(-n + 3) {
@@ -552,11 +615,13 @@ img {
 
 .pad-hover {
     display: block;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.pad-hover:hover,
-.pad-hover:focus {
+.pad-hover:hover .overlay-text,
+.pad-hover:focus .overlay-text {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    transform: translateY(0);
 }
 
 .pics {
@@ -611,7 +676,7 @@ img {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
-
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .adress-list {
@@ -634,7 +699,7 @@ img {
     font-family: inherit;
     color: var(--footer-contacts-color);
     font-style: normal;
-    
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-con:hover, 
@@ -676,6 +741,7 @@ img {
     border-radius: 50%;
     color: #FFFFFF;
     background-color:rgba(255, 255, 255, 0.1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .foot-icons {
